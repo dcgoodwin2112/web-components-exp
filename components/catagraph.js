@@ -9,6 +9,7 @@ class Catagraph extends HTMLElement {
       ).content.cloneNode(true)
     );
   }
+
   getTemplate(randomCatPun, randomCatEmoji) {
     const template = document.createElement("template");
     template.innerHTML = `
@@ -24,6 +25,7 @@ class Catagraph extends HTMLElement {
 `;
     return template;
   }
+
   getCatPuns() {
     return [
       "Stay PAWsitive!",
@@ -75,10 +77,12 @@ class Catagraph extends HTMLElement {
       "Wait a meow-ment.",
     ];
   }
+
   getRandomCatPun() {
     const catPuns = this.getCatPuns();
     return catPuns[Math.floor(Math.random() * (catPuns.length - 1))];
   }
+
   getCatEmojis() {
     return [
       "&#128049", //🐱
@@ -93,6 +97,7 @@ class Catagraph extends HTMLElement {
       "&#128576", //🙀
     ];
   }
+  
   getRandomCatEmoji() {
     const catEmojis = this.getCatEmojis();
     return catEmojis[Math.floor(Math.random() * (catEmojis.length - 1))];
